@@ -14,7 +14,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @PostMapping("/createemployee")
+    @PostMapping("/createemployee")   //In this api we are creating employeedetails
     public Employee createEmployee(@RequestBody Employee employee){
 
         Employee employeeCreated = employeeService.createEmployee(employee);
