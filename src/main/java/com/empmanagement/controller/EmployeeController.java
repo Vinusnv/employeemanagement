@@ -45,7 +45,7 @@ public class EmployeeController {
 
     }
 
-    @GetMapping("/fetchbysalary")
+    @GetMapping("/fetchbysalary")  // In this method we are fetching employee salary
     public List<Employee> fetchEmployeeBySalary(@RequestParam("salary") int salary){
 
         List<Employee> empsalary = employeeService.fetchEmployeeBySalary(salary);
