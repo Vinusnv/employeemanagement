@@ -54,7 +54,7 @@ public class EmployeeController {
 
     }
 
-    @GetMapping("/fetchallemployee")
+    @GetMapping("/fetchallemployee") // In this method we are fetching all employee details
     public List<Employee>  fetchAllEmployees(){
 
         List<Employee> allEmployee = employeeService.fetchAllEmployees();
