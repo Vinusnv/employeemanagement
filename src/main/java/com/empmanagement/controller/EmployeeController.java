@@ -22,7 +22,7 @@ public class EmployeeController {
 
     }
 
-    @PutMapping("/updateemployee")
+    @PutMapping("/updateemployee") // In this api we are updating the employeedetails
     public String  updateEmployee(@RequestBody Employee employee ,@RequestParam("empid") String empId ){
 
         String employeeUpdated = employeeService.updateEmployee(employee, empId);
