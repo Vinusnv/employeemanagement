@@ -3,6 +3,9 @@ package com.empmanagement.controller;
 import com.empmanagement.model.Employee;
 import com.empmanagement.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,10 +18,15 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     @PostMapping("/createemployee")   //In this api we are creating employeedetails
-    public Employee createEmployee(@RequestBody Employee employee){
+    public ResponseEntity<Employee>  createEmployee(@RequestBody Employee employee){
 
         Employee employeeCreated = employeeService.createEmployee(employee);
-        return employeeCreated;
+
+
+//        return  new ResponseEntity<Employee>(employeeCreated, HttpStatus.CREATED)  ;
+        return ResponseEntity.status(HttpStatus.CREATED).body(employeeCreated);
+
+
 
     }
 
