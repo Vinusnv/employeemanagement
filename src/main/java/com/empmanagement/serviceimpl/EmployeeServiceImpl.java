@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
@@ -115,4 +116,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 
     }
+
+    @Override
+    public List<Integer> fetchallEmployeeAges() {
+
+        List<Employee> employees = fetchAllEmployees();
+        List<Integer> ages = employees.stream().map(ele -> ele.getAge()).collect(Collectors.toList());
+        return ages;
+    }
+
 }
