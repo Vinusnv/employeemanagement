@@ -19,4 +19,6 @@ public interface EmployeeService {
     public List<Employee>  fetchAllEmployees();
 
     public String deleteEmployee(String empId);
+
+    public List<Integer> fetchallEmployeeAges();
 }

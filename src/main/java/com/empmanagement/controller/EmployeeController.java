@@ -97,21 +97,10 @@ public class EmployeeController {
 
     }
 
-    @GetMapping("/fetchallEmployeeAges")
-    public List<String> fetchallEmployeeAges()
+    @GetMapping("/fetchallemployeeAges")
+    public List<Integer> fetchallEmployeeAges()
     {
-        List<String> ls = new ArrayList<>();
-        ls.add("10");
-        ls.add("10");
-        ls.add("10");
-        ls.add("10");
-        ls.add("10");
-        ls.add("10");
-        ls.add("10");
-        ls.add("10");
-        ls.add("10");
-        ls.add("10");
-
-        return ls;
+       List<Integer> ageofallEmployees= employeeService.fetchallEmployeeAges();
+        return ageofallEmployees ;
     }
 }
