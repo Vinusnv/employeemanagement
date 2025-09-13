@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -94,5 +95,23 @@ public class EmployeeController {
         String employeeDeleted = employeeService.deleteEmployee(empId);
         return employeeDeleted;
 
+    }
+
+    @GetMapping("/fetchallEmployeeAges")
+    public List<String> fetchallEmployeeAges()
+    {
+        List<String> ls = new ArrayList<>();
+        ls.add("10");
+        ls.add("10");
+        ls.add("10");
+        ls.add("10");
+        ls.add("10");
+        ls.add("10");
+        ls.add("10");
+        ls.add("10");
+        ls.add("10");
+        ls.add("10");
+
+        return ls;
     }
 }
