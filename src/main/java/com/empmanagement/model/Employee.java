@@ -19,6 +19,7 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.UUID )
     private String empId;
 
+
     @Column(name = "empUsername")
     private String empUsername;
 
