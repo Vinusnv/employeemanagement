@@ -6,6 +6,7 @@ import com.empmanagement.model.Employee;
 import com.empmanagement.repository.EmployeeRepo;
 import com.empmanagement.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,6 +18,8 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     private EmployeeRepo employeeRepo;
+
+
 
 
 

@@ -24,4 +24,24 @@ public class GlobalExceptionHandler {
 
     }
 
+    @ExceptionHandler(EmployeeNotFoundException.class)
+    public ResponseEntity<?> EmployeeNotFoundException(EmployeeNotFoundException ex)
+    {
+        ErrorMapper errorMapper = new ErrorMapper();
+        errorMapper.setErrorcode(404);
+        errorMapper.setErrormessage(ex.getMessage());
+        errorMapper.setDeveloper("Aishwarya");
+
+        return new ResponseEntity<ErrorMapper>(errorMapper, HttpStatus.NOT_FOUND);
+
+
+
+//        String message= ex.getMessage();
+//
+//        return new ResponseEntity<String>(message, HttpStatus.NOT_FOUND);
+
+
+    }
+
+
 }
